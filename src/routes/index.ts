@@ -1,12 +1,8 @@
-import { Router, Request, Response } from 'express';
-import productRoutes from './productRoutes';
+import { Router } from 'express';
+import empresaRouter from './empresaRoutes';
 
-const apiRouter: Router = Router();
+const router: Router = Router();
 
-apiRouter.use('/product', productRoutes);
+router.use('/empresa', empresaRouter);
 
-apiRouter.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!');
-});
-
-export default apiRouter;
+export default router;
